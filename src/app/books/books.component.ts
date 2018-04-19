@@ -8,12 +8,17 @@ import { BOOKS } from '../books/mock-books-service'
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit {
-
+  
   books = BOOKS;
+  selectedBook: Book;
 
   constructor() { }
   
   ngOnInit() {
+  }
+
+  onSelect(book: Book): void{
+    this.selectedBook = book;
   }
 
 }
